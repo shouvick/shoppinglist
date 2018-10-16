@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="mod">
+<head>
+	<title>Project 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-controller="my_const">
+	<div class="container">
+		<h1 id="title">Products</h1>
+		<div >
+			<ul ng-repeat="x in products">
+				<li ng-click="addToList(x)" ng-class="{active:x.active}">{{ x.name }} <span>{{ x.price | currency }}</span> </li>
+			</ul>
+		
+
+		<div class="total">
+			<h1>Total : <span>{{ total() | currency }}</span> </h1>
+		</div>
+	  </div>
+	</div>
+</body>
+</html>
